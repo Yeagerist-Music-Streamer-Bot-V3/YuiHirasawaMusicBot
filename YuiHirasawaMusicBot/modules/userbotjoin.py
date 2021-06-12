@@ -18,9 +18,9 @@
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
-from DaisyXMusic.helpers.decorators import authorized_users_only, errors
-from DaisyXMusic.services.callsmusic.callsmusic import client as USER
-from DaisyXMusic.config import SUDO_USERS
+from YuiHirasawaMusicBot.helpers.decorators import authorized_users_only, errors
+from YuiHirasawaMusicBot.services.callsmusic.callsmusic import client as USER
+from YuiHirasawaMusicBot.config import SUDO_USERS
 
 @Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
@@ -51,7 +51,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add @Rengoku_Kyujoro_Helper to your Group and try again</b>",
         )
         return
     await message.reply_text(
@@ -126,7 +126,7 @@ async def addcchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add @Rengoku_Kyujoro_Helper to your Group and try again</b>",
         )
         return
     await message.reply_text(
