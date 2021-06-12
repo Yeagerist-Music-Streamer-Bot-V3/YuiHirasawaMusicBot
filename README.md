@@ -44,7 +44,7 @@ $ pip(3) install -r requirements.txt
 # Rename example.env to local.env and fill
 $ npm i -g npm
 # Start Bot 
-$ python(3) -m
+$ python(3) -m YuiHirasawaMusicBot
 ```
 
 ### Commands for Group 🛠
