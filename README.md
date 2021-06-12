@@ -7,7 +7,7 @@ Yui Hirasawa  Is A Anime theme music Streamer in telegram VC With playlists, Mul
 
 
 <p align="center">
-  <img src="https://telegra.ph/file/dd04b1968f1bc1169d162.jpg">
+  <img src="https://telegra.ph/file/8a4928725cbc36a0f703b.jpg">
 </p>
 
 <h2> Features 🔥 </h2>
