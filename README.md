@@ -1,6 +1,6 @@
-# YuiHirasawaMusicBot
+# Yui Hirasawa MusicBot
 
-Yui Hirasawa  Is A Anime theme music Streamer in telegram VC With playlists, Multi Playback, Channel play and more
+Yui Hirasawa Is A Anime theme music Streamer in telegram VC With playlists, Multi Playback, Channel play and more
 
 
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
