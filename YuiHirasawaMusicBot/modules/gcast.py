@@ -8,7 +8,7 @@ from pyrogram.types import Dialog, Chat, Message
 from pyrogram.errors import UserAlreadyParticipant
 
 from YuiHirasawaMusicBot.services.callsmusic.callsmusic import client as pakaya
-from config import SUDO_USERS
+from YuiHirasawaMusicBot.config import SUDO_USERS
 
 @Client.on_message(filters.command(["broadcast"]))
 async def broadcast(_, message: Message):
