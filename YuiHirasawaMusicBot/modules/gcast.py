@@ -1,69 +1,50 @@
-# Credits Daisyxmusic
-
-# Copyright (C) 2021  Inukaasith | Bruh_0x
-
-
-
-import asyncio
-
-
-
 from pyrogram import Client, filters
-
-from pyrogram.types import Dialog, Chat, Message
 
 from pyrogram.errors import UserAlreadyParticipant
 
+import asyncio
+
+from 
+YuiHirasawaMusicBot.config import SUDO_USERS
 
 
-from callsmusic import client as pakaya
 
-from config import SUDO_USERS
+@Client.on_message(filters.command(["gcast"]))
 
-
-
-@Client.on_message(filters.command(["chatcast"]))
-
-async def chatcast(_, message: Message):
+async def bye(client, message):
 
     sent=0
 
     failed=0
 
-    if message.from_user.id not in SUDO_USERS:
+    if message.from_user.id in SUDO_USERS:
 
-        await message.reply("Go away! This is not for you 😂!")
-
-        return
-
-    else:
-
-        wtf = await message.reply("`Starting a Chatcast...`")
+        lol = await message.reply("Starting Gcast")
 
         if not message.reply_to_message:
 
-            await wtf.edit("Please Reply to a Message to Chatcast it 🥺!")
+            await lol.edit("Reply to any text message to gcast sir")
 
             return
 
-        lmao = message.reply_to_message.text
+        msg = message.reply_to_message.text
 
-        async for dialog in pakaya.iter_dialogs():
+        async for dialog in client.iter_dialogs():
 
             try:
 
-                await pakaya.send_message(dialog.chat.id, lmao)
+                await client.send_message(dialog.chat.id, msg)
 
                 sent = sent+1
 
-                await wtf.edit(f"`ChatCasting...` \n\n**Sent to:** `{sent}` Chats \n**Failed in:** {failed} Chats")
+                await lol.edit(f"Gcasting.. Sent: {sent} chats. Failed: {failed} chats.")
 
             except:
 
                 failed=failed+1
 
-                await wtf.edit(f"`ChatCasting...` \n\n**Sent to:** `{sent}` Chats \n**Failed in:** {failed} Chats")
+                await lol.edit(f"Gcasting.. Sent: {sent} chats. Failed: {failed} chats.")
 
             await asyncio.sleep(3)
 
-        await message.reply_text(f"`ChatCasting Finished 😌` \n\n**Sent to:** `{sent}` Chats \n**Failed in:** {failed} Chats")
+        await message.reply_text(f"Gcasted message to {sent} chats. Failed {failed} chats.")
