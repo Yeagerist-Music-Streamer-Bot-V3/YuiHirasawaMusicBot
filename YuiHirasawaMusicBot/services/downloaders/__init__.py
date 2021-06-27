@@ -1,1 +1,3 @@
-from YuiHirasawaMusicBot.services.downloaders.youtube import download
+from YuiHirasawaMusicBot.services.downloaders import youtube
+
+__all__ = ["youtube"]
