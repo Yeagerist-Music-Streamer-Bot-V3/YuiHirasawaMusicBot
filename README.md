@@ -35,13 +35,13 @@ Get pyrogram (p)  `SESSION` from here:
 ### ⚔ Self-hosting (For Devs) 
 ```sh
 # Install Git First (apt-instll git)
-$ git clone https://github.com/TeamDaisyX/DaisyXmusic
-$ cd DaisyXMusic
+$ git clone https://github.com/Yeagerist-Music-Streamer-Bot-V3/YuiHirasawaMusicBot
+$ cd YuiHirasawaMusicBot
 # Upgrade sources
 # Install All Requirements 
 $ pip3 install -r requirements.txt
 # Fork This Repo and fill local.env and config.py both with your own values.Then Start The Bot
-$ python3 -m DaisyXMusic
+$ python3 -m YuiHirasawaMusicBot
 ```
 
 ### Commands for Group 🛠
