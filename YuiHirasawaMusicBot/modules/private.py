@@ -1,8 +1,16 @@
 import logging
-from YuiHirasawaMusicBot.modules.msg import Messages as tr
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from YuiHirasawaMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME
+from DaisyXMusic.modules.msg import Messages as tr
+from pyrogram import Client
+from pyrogram import filters
+from pyrogram.types import InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import Message
+from YuiHirasawaMusicBot.config import SOURCE_CODE
+from YuiHirasawaMusicBot.config import ASSISTANT_NAME
+from YuiHirasawaMusicBot.config import PROJECT_NAME
+from YuiHirasawaMusicBot.config import SUPPORT_GROUP
+from YuiHirasawaMusicBot.config import UPDATES_CHANNEL
+from YuiHirasawaMusicBot.config import BOT_USERNAME
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
@@ -22,7 +30,7 @@ def _start(client, message):
                         "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"{SOURCE_CODE}")
+                        "🛠 Source Code 🛠", url=url=f"{SOURCE_CODE}")
                 ]
             ]
         ),
@@ -80,7 +88,7 @@ def map(pos):
             [InlineKeyboardButton("➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📲 Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '💬 Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🛠 Source Code 🛠', url=f"{SOURCE_CODE}")],
+            [InlineKeyboardButton(text = '🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}")],
             [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -106,3 +114,4 @@ async def ghelp(_, message: Message):
             ]
         ),
     )
+
