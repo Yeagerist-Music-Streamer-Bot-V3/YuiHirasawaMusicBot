@@ -1,1 +1,1 @@
-worker: python3 -m YuiHirasawaMusicBotm
+worker: python3 -m YuiHirasawaMusicBot
