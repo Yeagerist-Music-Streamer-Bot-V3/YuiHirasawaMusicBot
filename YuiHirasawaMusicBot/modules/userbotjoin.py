@@ -1,25 +1,10 @@
-# Daisyxmusic (Telegram bot project )
-# Copyright (C) 2021  Inukaasith
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
-from pyrogram import Client, filters
+from pyrogram import Client
+from pyrogram import filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
-from YuiHirasawaMusicBot.helpers.decorators import authorized_users_only, errors
-from YuiHirasawaMusicBot.services.callsmusic.callsmusic import client as USER
+from YuiHirasawaMusicBot.helpers.decorators import authorized_users_only
+from YuiHirasawaMusicBot.helpers.decorators import errors
+from YuiHirasawaMusicBot.services.callsmusic import client as USER
 from YuiHirasawaMusicBot.config import SUDO_USERS
 
 @Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
@@ -112,7 +97,7 @@ async def addcchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "Rengoku_Kyujoro_Helper"
 
     try:
         await USER.join_chat(invitelink)
