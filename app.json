@@ -1,7 +1,7 @@
 {
   "name": "YuiHirasawaMusicBot",
   "logo": "https://telegra.ph/file/d378fd2a9c7109abc0e49.jpg",
-  "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
+  "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by MARSHALX TGCALLS.",
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/Yeagerist-Music-Streamer-Bot-V3/YuiHirasawaMusicBot",
   "buildpacks": [
@@ -38,7 +38,7 @@
     "PROJECT_NAME": {
       "description": "Your MusicPlayer project Name.",
       "required": false,
-      "value": "YuiHirasawaMusic V5"
+      "value": "YuiHirasawaMusicBot v5"
     },
     "ASSISTANT_NAME": {
       "description": "Your MusicPlayer's assistant Username without @.",
@@ -52,7 +52,7 @@
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
       "required": false,
-      "value": " https://telegra.ph/file/8a4928725cbc36a0f703b.jpg"
+      "value": "  https://telegra.ph/file/8a4928725cbc36a0f703b.jpg"
     },     
     "UPDATES_CHANNEL": {
       "description": "Updates Channel without @ [Leave this if you don't have one].",
@@ -79,7 +79,7 @@
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
-      "value": "10"
+      "value": "400"
     }
   }
 }
