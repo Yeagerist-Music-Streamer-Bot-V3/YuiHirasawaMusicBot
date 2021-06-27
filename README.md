@@ -1,13 +1,11 @@
-# Yui Hirasawa MusicBot
+<h1 align="centre">YuiHirasawaMusicBot V5.0 🎵</h1>
 
-Yui Hirasawa Is A Anime theme music Streamer in telegram VC With playlists, Multi Playback, Channel play and more
-
-
-#### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-
+### A Anime Theme music bot that can play music on Telegram Group and Channel Voice Chats
+#### POWERED BY [MARSHALX TGCALLS](https://github.com/MarshalX/tgcalls)
+### Available on telegram as [@YuiHirasawaMusic_Bot](https://t.me/YuiHirasawaMusic_Bot)
 
 <p align="center">
-  <img src="https://telegra.ph/file/8a4928725cbc36a0f703b.jpg">
+  <img src="https://telegra.ph/file/e28cc6d53edb82d31ce9d.jpg">
 </p>
 
 <h2> Features 🔥 </h2>
@@ -31,20 +29,19 @@ Yui Hirasawa Is A Anime theme music Streamer in telegram VC With playlists, Mult
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yeagerist-Music-Streamer-Bot-V3/YuiHirasawaMusicBot)
 
 Get pyrogram (p)  `SESSION` from here:
-[![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@SpEcHiDe/GenerateStringSession)
+
+[![Run on Repl.it](https://repl.it/badge/github/ChankitSaini/GenerateStringSession)](https://replit.com/@ChankitSaini/GenerateStringSession)
 
 ### ⚔ Self-hosting (For Devs) 
 ```sh
 # Install Git First (apt-instll git)
-$ git clone hhttps://github.com/Yeagerist-Music-Streamer-Bot-V3/YuiHirasawaMusicBot
-$ cd YuiHirasawaMusicBot
+$ git clone https://github.com/TeamDaisyX/DaisyXmusic
+$ cd DaisyXMusic
 # Upgrade sources
 # Install All Requirements 
-$ pip(3) install -r requirements.txt
-# Rename example.env to local.env and fill
-$ npm i -g npm
-# Start Bot 
-$ python(3) -m YuiHirasawaMusicBot
+$ pip3 install -r requirements.txt
+# Fork This Repo and fill local.env and config.py both with your own values.Then Start The Bot
+$ python3 -m DaisyXMusic
 ```
 
 ### Commands for Group 🛠
@@ -94,7 +91,7 @@ For linked group admins only:
 If you donlt like to play in linked channel:
  1. Get your channel ID.
  2. Rename your group to: Channel Music: your_channel_id
- 3. Add  as Channel admin with full perms
+ 3. Add @YuiHirasawaMusic_Bot as Channel admin with full perms
  4. add helper to channel
  5. Simply send commands in your group.
 
@@ -115,18 +112,19 @@ Don't edit this part
 - [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
 
 This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork daisyxmusic won't exist. 
-DaisyXmusic is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic) for fit the needs of @DaisyXbot users
+YuiHirasawaMusicBot is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic) for fit the needs of @DaisyXbot users
 
 #### Contribtors
 - [InukaASiTH](https://github.com/InukaAsith): Dev
-- [Rojserbest](http://github.com/rojserbes): Dev
+- [Achu biju](https://github.com/Achu2234): Dev
+- [Technical-Hunter](https://github.com/Technical-Hunter): Dev
+- [Rojserbest](http://github.com/rojserbest): Dev
 - [Wrench](https://github.com/EverythingSuckz/): Dev
 - [Bemro](https://github.com/bemroofficial): Dev
 - [QueenArzoo](https://github.com/QueenArzoo): Dev
 - [lucifeermorningstar](https://github.com/lucifeermorningstar): Dev
-- [AuraXNetwork](https://github.com/AuraXNetwork/AuraXMusicBot)
 - [Hamker Cat](https://github.com/thehamkercat/)
 - [Anjana-Ma](https://github.com/Anjana-Ma): 
 - [ImJanindu](https://github.com/ImJanindu): 
-- [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
-- [Original Repo owners](https://github.com/suprojects/CallsMusic)
+- [MARSHALX](https://github.com/MarshalX): TgCalls
+- [Original Repo owners](https://github.com/CallsMusic/CallsMusic)
