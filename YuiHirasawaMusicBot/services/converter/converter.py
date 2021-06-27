@@ -1,8 +1,7 @@
 import asyncio
 from os import path
 
-from 
-converter.helpers.errors import FFmpegReturnCodeError
+from YuiHirasawaMusicBot.helpers.errors import FFmpegReturnCodeError
 
 
 async def convert(file_path: str) -> str:
