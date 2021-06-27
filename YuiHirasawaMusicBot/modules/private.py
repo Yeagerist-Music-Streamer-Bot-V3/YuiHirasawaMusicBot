@@ -1,5 +1,5 @@
 import logging
-from DaisyXMusic.modules.msg import Messages as tr
+from YuiHirasawaMusicBot.modules.msg import Messages as tr
 from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
@@ -30,7 +30,7 @@ def _start(client, message):
                         "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=url=f"{SOURCE_CODE}")
+                         "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
                 ]
             ]
         ),
@@ -114,4 +114,3 @@ async def ghelp(_, message: Message):
             ]
         ),
     )
-
