@@ -1,6 +1,6 @@
 # Credits Daisyxmusic
 # Copyright (C) 2021  Inukaasith | Bruh_0x
-l
+
 
 import asyncio
 
