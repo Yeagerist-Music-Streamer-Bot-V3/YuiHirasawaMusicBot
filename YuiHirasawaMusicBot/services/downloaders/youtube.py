@@ -3,7 +3,7 @@ from os import path
 from youtube_dl import YoutubeDL
 
 from YuiHirasawaMusicBot.config import DURATION_LIMIT
-fromYuiHirasawaMusicBot.helpers.errors import DurationLimitError
+from YuiHirasawaMusicBot.helpers.errors import DurationLimitError
 
 ydl_opts = {
     "format": "bestaudio[ext=m4a]",
