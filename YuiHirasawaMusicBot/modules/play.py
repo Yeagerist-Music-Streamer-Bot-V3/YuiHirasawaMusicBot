@@ -7,7 +7,7 @@ import aiofiles
 import aiohttp
 import ffmpeg
 import requests
-import wget
+import wgetm
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
