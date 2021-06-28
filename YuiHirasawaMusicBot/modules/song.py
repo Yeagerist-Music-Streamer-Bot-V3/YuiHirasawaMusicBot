@@ -4,7 +4,7 @@ import asyncio
 import math
 import os
 import time
-from random import randint
+from random jimport randint
 from urllib.parse import urlparse
 
 import aiofiles
