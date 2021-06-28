@@ -26,7 +26,7 @@ from YuiHirasawaMusicBot.modules.play import convert_seconds
 from YuiHirasawaMusicBot.modules.play import time_to_seconds
 from YuiHirasawaMusicBot.modules.play import changeImageSize
 from YuiHirasawaMusicBot.config import BOT_NAME as bn
-from YuiHirasawaMusicBot.config import DURATION_LIMIT
+from YuiHirasawaMusicBot import DURATION_LIMIT
 from YuiHirasawaMusicBot.config import UPDATES_CHANNEL as updateschannel
 from YuiHirasawaMusicBot.config import que
 from YuiHirasawaMusicBot.function.admins import admins as a
@@ -418,8 +418,11 @@ async def play(_, message: Message):
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
     if message.reply_to_message:
+        if message.reply_to_message.audio:
+            pass
         entities = []
-        toxt = message.reply_to_message.text or message.reply_to_message.caption
+        toxt = message.reply_to_message.text \
+              or message.reply_to_message.caption
         if message.reply_to_message.entities:
             entities = message.reply_to_message.entities + entities
         elif message.reply_to_message.caption_entities:
@@ -468,7 +471,7 @@ async def play(_, message: Message):
     elif urls:
         query = toxt
         await lel.edit("🎵 **Processing**")
-        ydl_opts = {"format": "bestaudio[ext=m4a]"}
+        ydl_opts = {"format": "bestaudio/best"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -522,7 +525,7 @@ async def play(_, message: Message):
             query += " " + str(i)
         print(query)
         await lel.edit("🎵 **Processing**")
-        ydl_opts = {"format": "bestaudio[ext=m4a]"}
+        ydl_opts = {"format": "bestaudio/best"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -792,7 +795,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add @Rengoku_Kyujoro_Helper to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
