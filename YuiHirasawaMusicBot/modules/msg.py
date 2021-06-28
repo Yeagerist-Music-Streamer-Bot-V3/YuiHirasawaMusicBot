@@ -73,7 +73,7 @@ f"""
 - /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
 **=>> Commands for Sudo Users ⚔️**
  - /userbotleaveall - remove assistant from all chats
- - /gcast <reply to message> - globally brodcast replied message to all chats
+ - /broadcast <reply to message> - globally brodcast replied message to all chats
  - /pmpermit [on/off] - enable/disable pmpermit message
 *Sudo Users can execute any command in any groups
 """
