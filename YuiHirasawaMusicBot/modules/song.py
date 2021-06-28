@@ -1,10 +1,11 @@
+
 from __future__ import unicode_literals
 
 import asyncio
 import math
 import os
 import time
-from random jimport randint
+from random import randint
 from urllib.parse import urlparse
 
 import aiofiles
@@ -20,6 +21,7 @@ from youtubesearchpython import SearchVideos
 
 from YuiHirasawaMusicBot.config import DURATION_LIMIT
 from YuiHirasawaMusicBot.modules.play import arq
+
 
 
 @Client.on_message(filters.command("song") & ~filters.channel)
