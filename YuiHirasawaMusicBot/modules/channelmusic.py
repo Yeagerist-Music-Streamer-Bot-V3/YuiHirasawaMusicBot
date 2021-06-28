@@ -26,7 +26,7 @@ from YuiHirasawaMusicBot.modules.play import convert_seconds
 from YuiHirasawaMusicBot.modules.play import time_to_seconds
 from YuiHirasawaMusicBot.modules.play import changeImageSize
 from YuiHirasawaMusicBot.config import BOT_NAME as bn
-from YuiHirasawaMusicBot import DURATION_LIMIT
+from YuiHirasawaMusicBot.config import DURATION_LIMIT
 from YuiHirasawaMusicBot.config import UPDATES_CHANNEL as updateschannel
 from YuiHirasawaMusicBot.config import que
 from YuiHirasawaMusicBot.function.admins import admins as a
