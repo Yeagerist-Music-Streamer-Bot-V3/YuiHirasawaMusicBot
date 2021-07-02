@@ -554,7 +554,7 @@ async def play(_, message: Message):
     elif urls:
         query = toxt
         await lel.edit("🎵 <b>Processing</b>")
-        ydl_opts = {"format": "bestaudio/best"}
+        ydl_opts = {"format": "bestaudi[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -608,7 +608,7 @@ async def play(_, message: Message):
             query += " " + str(i)
         print(query)
         await lel.edit("🎵 **Processing**")
-        ydl_opts = {"format": "bestaudio/best"}
+        ydl_opts = {"format": "bestaudi[ext=m4a]"}
         
         try:
           results = YoutubeSearch(query, max_results=5).to_dict()
@@ -805,7 +805,7 @@ async def ytplay(_, message: Message):
         query += " " + str(i)
     print(query)
     await lel.edit("🎵 <b>Processing</b>")
-    ydl_opts = {"format": "bestaudio/best"}
+    ydl_opts = {"format": "bestaudi[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
         url = f"https://youtube.com{results[0]['url_suffix']}"
