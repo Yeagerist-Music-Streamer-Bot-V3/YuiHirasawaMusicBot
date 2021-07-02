@@ -1,13 +1,12 @@
 from typing import List
 
 from pyrogram.types import Chat
-from pyrogram.types import User
 
 from YuiHirasawaMusicBot.function.admins import get as gett
 from YuiHirasawaMusicBot.function.admins import set
 
 
-async def get_administrators(chat: Chat) -> List[User]:
+async def get_administrators(chat: Chat) -> List[int]:
     get = gett(chat.id)
 
     if get:
