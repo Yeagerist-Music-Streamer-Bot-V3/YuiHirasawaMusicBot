@@ -28,9 +28,8 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yeagerist-Music-Streamer-Bot-V3/YuiHirasawaMusicBot)
 
-Get pyrogram (p)  `SESSION` from here:
-
-[![Run on Repl.it](https://repl.it/badge/github/ChankitSaini/GenerateStringSession)](https://replit.com/@ChankitSaini/GenerateStringSession)
+#### Get Pyrogram String Session
+<a href="https://replit.com/@IamHirusha/GetPyroSessionVC"><img src="https://img.shields.io/badge/Run-Repl.it-white?style=for-the-badge&logo=repl.it"></a>
 
 ### ⚔ Self-hosting (For Devs) 
 ```sh
