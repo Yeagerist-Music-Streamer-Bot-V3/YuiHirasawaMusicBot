@@ -5,7 +5,7 @@
 ### Available on telegram as [@YuiHirasawaMusic_Bot](https://t.me/YuiHirasawaMusic_Bot)
 
 <p align="center">
-  <img src="https://telegra.ph/file/e28cc6d53edb82d31ce9d.jpg">
+  <img src="https://telegra.ph/file/b184fdb79e3ba8bc73ba8.jpg">
 </p>
 
 <h2> Features 🔥 </h2>
