@@ -11,7 +11,7 @@ from pyrogram.errors import UserAlreadyParticipant
 from YuiHirasawaMusicBot.services.callsmusic.callsmusic import client as pakaya
 from YuiHirasawaMusicBot.config import SUDO_USERS
 
-@Client.on_message(filters.command(["broadcast"]))
+@Client.on_message(filters.command(["gcast"]))
 async def broadcast(_, message: Message):
     sent=0
     failed=0
