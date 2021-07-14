@@ -21,6 +21,8 @@
 - Userbot auto join
 - Channel Music Play
 - Keyboard selection support for youtube play
+- Ban / Unban Users and Check User Status.
+- Broadcast Messages
 
 ## 🚀 Deployment
 
