@@ -1,4 +1,4 @@
-from YuiHirasawaMusicBot import Config
+from YuiHirasawaMusicBot import config
 from YuiHirasawaMusicBot.database import Database
 
-db = Database(Config.MONGODB_URI, Config.SESSION_NAME)
+db = Database(config.MONGODB_URI, config.SESSION_NAME)
