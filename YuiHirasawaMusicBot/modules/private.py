@@ -5,8 +5,8 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import Message
-from YuiHirasawaMusicBot.helpers.database.database.access_db import db
-from YuiHirasawaMusicBot.helpers.database.database.add_user import AddUserToDatabase
+from .database.access_db import db
+from .database.add_user import AddUserToDatabase
 from YuiHirasawaMusicBot.helpers.broadcast import broadcast_handler
 from pyrogram.errors import UserNotParticipant
 from YuiHirasawaMusicBot.config import SOURCE_CODE
