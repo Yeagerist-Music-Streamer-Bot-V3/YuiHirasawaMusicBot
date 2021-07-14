@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
 def _start(client, message):
-    await AddUserToDatabase(bot, m)
+   await AddUserToDatabase(bot, m)
     FSub = await ForceSub(bot, m)
     if FSub == 400:
         return
