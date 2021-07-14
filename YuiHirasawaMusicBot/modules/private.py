@@ -18,8 +18,8 @@ from YuiHirasawaMusicBot.config import BOT_USERNAME
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
-def _start(client, message):
-   await AddUserToDatabase(bot, m)
+async def _start(client, message):
+    await AddUserToDatabase(bot, m)
     FSub = await ForceSub(bot, m)
     if FSub == 400:
         return
@@ -66,7 +66,7 @@ async def gstart(_, message: Message):
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
-def _help(client, message):
+async def _help(client, message):
     await AddUserToDatabase(bot, m)
     FSub = await ForceSub(bot, m)
     if FSub == 400:
@@ -83,7 +83,7 @@ def _help(client, message):
 help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help+'))
 
 @Client.on_callback_query(help_callback_filter)
-def help_answer(client, callback_query):
+async def help_answer(client, callback_query):
     chat_id = callback_query.from_user.id
     disable_web_page_preview=True
     message_id = callback_query.message.message_id
@@ -93,7 +93,7 @@ def help_answer(client, callback_query):
     )
 
 
-def map(pos):
+async def map(pos):
     if(pos==1):
         button = [
             [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
