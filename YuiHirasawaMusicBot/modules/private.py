@@ -9,6 +9,7 @@ from YuiHirasawaMusicBot.access_db import db
 from YuiHirasawaMusicBot.add_user import AddUserToDatabase
 from YuiHirasawaMusicBot.helpers.broadcast import broadcast_handler
 from pyrogram.errors import UserNotParticipant
+from YuiHirasawaMusicBot import config
 from YuiHirasawaMusicBot.config import SOURCE_CODE
 from YuiHirasawaMusicBot.config import ASSISTANT_NAME
 from YuiHirasawaMusicBot.config import PROJECT_NAME
@@ -132,12 +133,12 @@ async def ghelp(_, message: Message):
     )
     
 
-@Client.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(Config.BOT_OWNER) & ~filters.edited)
+@Client.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(config.BOT_OWNER) & ~filters.edited)
 async def _broadcast(_, m: Message):
     await broadcast_handler(m)
 
 
-@Client.on_message(filters.private & filters.command("status") & filters.user(Config.BOT_OWNER))
+@Client.on_message(filters.private & filters.command("status") & filters.user(config.BOT_OWNER))
 async def _status(_, m: Message):
     total_users = await db.total_users_count()
     await m.reply_text(
