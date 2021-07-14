@@ -118,3 +118,18 @@ async def ghelp(_, message: Message):
             ]
         ),
     )
+    
+
+@Client.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(Config.BOT_OWNER) & ~filters.edited)
+async def _broadcast(_, m: Message):
+    await broadcast_handler(m)
+
+
+@Client.on_message(filters.private & filters.command("status") & filters.user(Config.BOT_OWNER))
+async def _status(_, m: Message):
+    total_users = await db.total_users_count()
+    await m.reply_text(
+        text=f"**Total Users in DB: {total_users}**",
+        parse_mode="Markdown",
+        quote=True
+    )
