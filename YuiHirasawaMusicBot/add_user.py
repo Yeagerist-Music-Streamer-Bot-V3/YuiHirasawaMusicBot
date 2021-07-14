@@ -1,4 +1,4 @@
-from config import Config
+from YuiHirasawaMusicBot.config import Config
 from YuiHirasawaMusicBot.access_db import db
 from pyrogram import Client
 from pyrogram.types import Message
