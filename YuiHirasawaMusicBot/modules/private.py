@@ -18,10 +18,12 @@ from YuiHirasawaMusicBot.config import UPDATES_CHANNEL
 from YuiHirasawaMusicBot.config import BOT_USERNAME
 logging.basicConfig(level=logging.INFO)
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['start']))
-async def _start(client, message):
-    AddUserToDatabase(client, message)
-                                      return
+@@Client.on_message(filters.private & filters.incoming & filters.command(['start']))
+def _start(client, message):
+   AddUserToDatabase(client, message)
+    FSub = await ForceSub(bot, m)
+    if FSub == 400:
+        return
     client.send_message(message.chat.id,
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
         parse_mode="markdown",
