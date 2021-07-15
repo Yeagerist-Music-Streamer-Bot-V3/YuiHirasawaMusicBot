@@ -29,13 +29,16 @@
       "description": "Your MusicPlayer Bot Name.",
       "required": false,
       "value": ""
-   },
-        "BOT_OWNER": {
-            "description": "Bot Owner UserID"
-        },
-        "MONGODB_URI": {
-            "description": "MongoDB Database URI for Saving UserID for Broadcast. Tutorial: https://www.youtube.com/watch?v=aXlF80Cn7iU"
     },
+    "BOT_OWNER": {
+      "description": "Bot Owner UserID"
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB Database URI for Saving UserID for Broadcast. Tutorial: https://www.youtube.com/watch?v=aXlF80Cn7iU"
+    },
+    "DATABASE_NAME": {
+      "description": "Mongodb Database Name"
+    }, 
     "SUPPORT_GROUP": {
       "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
       "required": false,
