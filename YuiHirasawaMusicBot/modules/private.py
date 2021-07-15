@@ -21,8 +21,7 @@ logging.basicConfig(level=logging.INFO)
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def _start(client, message):
     AddUserToDatabase(client, message)
-    
-        return
+                                      return
     client.send_message(message.chat.id,
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
         parse_mode="markdown",
