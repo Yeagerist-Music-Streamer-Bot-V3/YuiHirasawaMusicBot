@@ -21,7 +21,7 @@ logging.basicConfig(level=logging.INFO)
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
 def _start(client, message):
    AddUserToDatabase(client, message)
-    FSub = await ForceSub(bot, m)
+    FSub = await ForceSub(client, message))
     if FSub == 400:
         return
     client.send_message(message.chat.id,
