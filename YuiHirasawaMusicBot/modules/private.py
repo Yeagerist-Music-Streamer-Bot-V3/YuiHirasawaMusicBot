@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def _start(client, message):
-   await AddUserToDatabase(bot: client, cmd: Message)
+   await AddUserToDatabase(client, message)
    await client.send_message(message.chat.id,
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
         parse_mode="markdown",
@@ -45,7 +45,7 @@ async def _start(client, message):
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-    await AddUserToDatabase(bot: Client, cmd: Message)
+    await AddUserToDatabase(_, message)
     await message.reply_text(
         f"""**🔴 {PROJECT_NAME} is online**""",
         reply_markup=InlineKeyboardMarkup(
@@ -62,7 +62,7 @@ async def gstart(_, message: Message):
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 async def _help(client, message):
-    await AddUserToDatabase(bot: Client, cmd: Message)
+    await AddUserToDatabase(client, message)
     await client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
         parse_mode="markdown",
