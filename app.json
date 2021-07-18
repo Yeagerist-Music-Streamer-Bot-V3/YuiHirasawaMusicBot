@@ -30,15 +30,6 @@
       "required": false,
       "value": ""
     },
-    "BOT_OWNER": {
-      "description": "Bot Owner UserID"
-    },
-    "MONGODB_URI": {
-      "description": "MongoDB Database URI for Saving UserID for Broadcast. Tutorial: https://www.youtube.com/watch?v=aXlF80Cn7iU"
-    },
-    "DATABASE_NAME": {
-      "description": "Mongodb Database Name"
-    }, 
     "SUPPORT_GROUP": {
       "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
       "required": false,
@@ -85,9 +76,6 @@
       "description": "List of user IDs counted as admin everywhere (separated by space).",
       "required": true
     },
-    "BROADCAST_AS_COPY": {
-      "description": "Broadcast as Copy or with Forward Tag. Value should be True/False."
-    }, 
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
