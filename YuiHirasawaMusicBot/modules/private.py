@@ -5,11 +5,6 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import Message
-from YuiHirasawaMusicBot.access_db import db
-from YuiHirasawaMusicBot.add_user import AddUserToDatabase
-from YuiHirasawaMusicBot.helpers.broadcast import broadcast_handler
-from pyrogram.errors import UserNotParticipant
-from YuiHirasawaMusicBot import config
 from YuiHirasawaMusicBot.config import SOURCE_CODE
 from YuiHirasawaMusicBot.config import ASSISTANT_NAME
 from YuiHirasawaMusicBot.config import PROJECT_NAME
@@ -19,9 +14,8 @@ from YuiHirasawaMusicBot.config import BOT_USERNAME
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
-async def _start(client, message):
-   await AddUserToDatabase(client, message)
-   await client.send_message(message.chat.id,
+def _start(client, message):
+    client.send_message(message.chat.id,
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
         parse_mode="markdown",
         reply_markup=InlineKeyboardMarkup(
@@ -45,7 +39,6 @@ async def _start(client, message):
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-    await AddUserToDatabase(_, message)
     await message.reply_text(
         f"""**🔴 {PROJECT_NAME} is online**""",
         reply_markup=InlineKeyboardMarkup(
@@ -61,9 +54,8 @@ async def gstart(_, message: Message):
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
-async def _help(client, message):
-    await AddUserToDatabase(client, message)
-    await client.send_message(chat_id = message.chat.id,
+def _help(client, message):
+    client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
         parse_mode="markdown",
         disable_web_page_preview=True,
@@ -75,7 +67,7 @@ async def _help(client, message):
 help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help+'))
 
 @Client.on_callback_query(help_callback_filter)
-async def help_answer(client, callback_query):
+def help_answer(client, callback_query):
     chat_id = callback_query.from_user.id
     disable_web_page_preview=True
     message_id = callback_query.message.message_id
@@ -85,7 +77,7 @@ async def help_answer(client, callback_query):
     )
 
 
-async def map(pos):
+def map(pos):
     if(pos==1):
         button = [
             [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
@@ -121,19 +113,4 @@ async def ghelp(_, message: Message):
                 ]
             ]
         ),
-    )
-    
-
-@Client.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(config.BOT_OWNER) & ~filters.edited)
-async def _broadcast(_, m: Message):
-    await broadcast_handler(m)
-
-
-@Client.on_message(filters.private & filters.command("status") & filters.user(config.BOT_OWNER))
-async def _status(_, m: Message):
-    total_users = await db.total_users_count()
-    await m.reply_text(
-        text=f"**Total Users in DB: {total_users}**",
-        parse_mode="Markdown",
-        quote=True
     )
