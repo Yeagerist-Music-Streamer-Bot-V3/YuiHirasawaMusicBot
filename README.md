@@ -1,6 +1,6 @@
-<h1 align="centre">YuiHirasawaMusicBot V5.0 🎵</h1>
+<h1 align="centre">YuiHirasawaMusicBot V5.0 🎵 Old</h1>
 
-### A Anime Theme music bot that can play music on Telegram Group and Channel Voice Chats
+### A Anime Theme music bot that can play music on Telegram Group and Channel Voice Chats 
 #### POWERED BY [MARSHALX TGCALLS](https://github.com/MarshalX/tgcalls)
 ### Available on telegram as [@YuiHirasawaMusic_Bot](https://t.me/YuiHirasawaMusic_Bot)
 
@@ -21,8 +21,7 @@
 - Userbot auto join
 - Channel Music Play
 - Keyboard selection support for youtube play
-- Ban / Unban Users and Check User Status.
-- Broadcast Messages
+
 
 ## 🚀 Deployment
 
